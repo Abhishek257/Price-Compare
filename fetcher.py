@@ -20,13 +20,13 @@ def change_all_whitespace(x):
         pass
     return x
 
-##--------------------INPUT/INPUT FORMATTING---------------------------##
+##--------------------INPUT/INPUT FORMATTING-----------------------------##
 
 def Searching():
     product_input = input("Enter your product:")
     product_input = change_all_whitespace(product_input)
 
-    ##-------------------Searching for links--------------------------------##
+    ##-------------------Searching for links----------------------------------##
 
     URL = ("http://www.pricetree.com/search.aspx?q=" + product_input)
     result = bs4.BeautifulSoup(urlopen(URL), 'html.parser')
